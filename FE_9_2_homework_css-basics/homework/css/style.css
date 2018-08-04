@@ -1,0 +1,142 @@
+/* 
+
+write your code here
+
+*/
+
+@media screen {
+    p::first-letter {
+        font-size: 30px;
+        color: #76cdd7;
+    }
+    .boxes img.thumbnail {
+        border-radius: 50%;
+    }
+    .boxes h2.tm-box-bg-title:hover {
+        color: white;
+        background-color: deepskyblue;
+        font-weight: bold;
+    }
+    .tm-content-box,
+    .tm-sidebar {
+        box-shadow: 0px 0px 15px 1px grey;
+    }
+    .blocks .flex-2-col {
+        box-shadow: none;
+    }
+    .tm-main-nav li {
+        border-bottom: 1px dashed silver;
+    }
+    .tm-main-nav li:last-child {
+        border-bottom: none;
+    }
+    section::before {
+        content: '';
+        border-top: 20px solid deepskyblue;
+        border-right: 100px solid transparent;
+    }
+    .carousel-item h2.tm-section-title {
+        color: gainsboro;
+        letter-spacing: 5px;
+    }
+    h2 + p {
+        font-style: italic;
+    }
+    p {
+        line-height: 30px;
+        text-indent: 1.5em;
+    }
+    p.tm-banner-text {
+        line-height: normal;
+        text-indent: inherit;
+    }
+    section.heading h2 {
+        color: #76cdd7;
+        text-align: center;
+    }
+    section.heading ol li a:nth-child(1):visited {
+        color: silver;
+    }
+    section.heading ol li a:hover {
+        border-bottom: 1px double;
+        color: #76cdd7;
+    }
+    section.heading ol li a.text::after {
+        content: 'New';
+        position: relative;
+        top: -1em;
+        color: red;
+        font-size: 50%;
+        line-height: 0;
+    }
+    .box:nth-child(odd) {
+        background-color: lightgrey;
+    }
+    .box p {
+        text-indent: inherit;
+    }
+    .box p::first-letter {
+        color: currentColor;
+    }
+    .box div {
+        width: 110%;
+    }
+    .box div p {
+        width: 80%;
+        font-size: 20px;
+    }
+    input[type="text"],
+    .btn {
+        color: red;
+    }
+    .btn:hover {
+        color: white;
+        background-color: deepskyblue;
+    }
+    .mandatory-field::after {
+        content: "*";
+        color: red;
+    }
+}
+
+@media print {
+    @page {
+        margin-bottom: 1cm;
+    }
+    div.tm-sidebar,
+    section.tm-content-box,
+    div#about,
+    section.blocks,
+    section#ideas,
+    section.tm-content-box {
+        display: none;
+    }
+    body {
+        background: transparent;
+    }
+    h2.tm-section-title {
+        color: blue;
+    }
+    .flex-2-col {
+        flex-direction: column;
+    }
+    div.tm-main-content {
+        margin: 0;
+        padding: 0;
+    }
+    div.tm-team-description-container {
+        max-width: 800px;
+    }
+    div.tm-banner-inner {
+        height: 60%;
+    }
+    .margin-b-10 {
+        margin-bottom: -150px;
+    }
+    .pad {
+        margin-bottom: -350px;
+    }
+    .pad p:nth-child(2) {
+        margin-right: 50px;
+    }
+}
