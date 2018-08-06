@@ -32,6 +32,8 @@ header {
       padding: 15px 60px;
       text-transform: uppercase;
       color: #30bed4; }
+    header nav a:hover {
+      color: #ee4000; }
 
 div.toolbar {
   display: block;
@@ -128,7 +130,11 @@ button.send-btn {
   text-transform: uppercase;
   color: white;
   background-color: #30bed4;
-  border-style: none; }
+  border-style: none;
+  cursor: pointer; }
+
+button.send-btn:hover {
+  background-color: #ee4000; }
 
 footer span {
   display: block;
