@@ -1,0 +1,191 @@
+@mixin placehold{
+     background-color: $backGround;
+    
+}
+
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: $fontFam;
+    font-size: $fontSize;
+    text-align: center;
+    max-width: 960px;
+    background-color: $backGround;
+
+}
+
+div.main-wrapper {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    .logo img {
+        width: 80%;
+        height: 80%;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        margin-top: 14%;
+        padding-top: 5px;
+        a {
+            text-decoration: none;
+            padding: 15px 60px;
+            text-transform: uppercase;
+            color: $headColor;
+        }
+    }
+}
+
+div.toolbar {
+    display: block;
+    float: right;
+    padding-top: 10px;
+    input::placeholder {
+        padding: 10px 0;
+        color: $headColor;
+    }
+
+    input[type="text"] {
+        padding: 10px 20px;
+        @include placehold;
+        border: 1px solid $headColor;
+    }
+
+}
+
+#list {
+    margin-top: 10%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: space-between;
+    grid-gap: $gap;
+    article {
+        background-color: lighten($tableBackground, 10%);
+        margin-bottom: $gap*2;
+        padding: $gap;
+        div {
+            text-align: left;
+            padding: 0 $gap;
+            h3 {
+                text-transform: uppercase;
+                color: $textColor;
+                font-weight: 700;
+                margin: 0 auto;
+            }
+            p {
+                color: $pColor;
+                line-height: 25px;
+                font-weight: 100;
+                margin: 0 auto;
+            }
+        }
+        img {
+            width: 100%;
+        }
+        .post-description {
+            color: darken($textColor, 10%);
+            font-size: 70%;
+            border-bottom: 1px solid $pColor;
+        }
+        
+    }
+    
+}
+
+article:nth-child(2) {
+    height: 90%;
+}
+
+article:nth-child(4) {
+    height: 85%;
+}
+
+section {
+    width: 100%;
+    div {
+        h1 {
+            text-align: right;
+            text-transform: uppercase;
+            color: $headColor;
+            font-weight: 700;
+        }
+        p {
+            text-align: left;
+            color: $pColor;
+            line-height: 25px;
+            font-weight: 100;
+        }
+        img {
+            width: 100%;
+        }
+
+    }
+
+}
+
+.contact-form {
+    h1,
+    h4 {
+        text-align: right;
+        text-transform: uppercase;
+        color: $headColor;
+        font-weight: bold;
+        line-height: 5px;
+    }
+    
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    input {
+        margin-bottom: $gap/2;
+        padding: 10px 10px;
+    }
+    textarea {
+        padding-bottom: 50px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    textarea::placeholder {
+        font-family: $fontFam;
+    }
+    .form-input{
+        @include placehold;
+        border: 1px solid $pColor;
+    }
+    
+}
+
+button.send-btn {
+    float: right;
+    margin: 10px 0;
+    padding: 10px 70px;
+    text-transform: uppercase;
+    color: white;
+    background-color: $headColor;
+    border-style: none;
+}
+
+footer {
+    span {
+        display: block;
+        float: left;
+        margin-top: 50px;
+        padding-bottom: 5px;
+        font-size: 70%;
+        color: $pColor;
+    }
+    
+}
