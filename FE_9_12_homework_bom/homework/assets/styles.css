@@ -1,0 +1,52 @@
+body{
+    text-align: center
+}
+.buttons{
+    padding: 5px;
+    border-radius: 10px
+}
+#buttons{
+    margin-top: 20px;
+}
+input{
+    width: 250px;
+    padding: 5px;
+    border-radius: 5px;
+}
+#buttons button{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.emptyText{
+    display: block;
+}
+
+.taskItem{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskItem img{
+    display: block;
+    width: 35px;
+    height: 35px;
+    
+}
+.taskItem button{
+    width: 35px;
+    height: 35px;
+}
+.pushers{
+    width: 20px;
+    height: 20px;
+}
+#active{
+    display: block;
+}
+#main,
+#add,
+#modify{
+/*    display: none;*/
+}
+
